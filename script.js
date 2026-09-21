@@ -1,24 +1,17 @@
 const expenseForm = document.getElementById("expenseForm");
 const incomeForm = document.getElementById("incomeForm");
 const budgetForm = document.getElementById("budgetForm");
-
 const expenseList = document.getElementById("expenseList");
 const emptyState = document.getElementById("emptyState");
-
 const categoryFilter = document.getElementById("categoryFilter");
-
 const totalIncome = document.getElementById("totalIncome");
 const totalExpenses = document.getElementById("totalExpenses");
 const balance = document.getElementById("balance");
 const budgetDisplay = document.getElementById("budgetDisplay");
-
 const budgetPercentage = document.getElementById("budgetPercentage");
 const progressFill = document.getElementById("progressFill");
-
 const categorySummary = document.getElementById("categorySummary");
-
 const themeToggle = document.getElementById("themeToggle");
-
 const editModal = document.getElementById("editModal");
 const closeModal = document.getElementById("closeModal");
 const editExpenseForm = document.getElementById("editExpenseForm");
@@ -66,17 +59,6 @@ function saveData() {
 }
 
 
-// ================================
-// FORMAT MONEY
-// ================================
-
-function formatMoney(amount) {
-
-    return new Intl.NumberFormat("en-NG", {
-        style: "currency",
-        currency: "NGN"
-    }).format(amount);
-}
 
 
 // ================================
@@ -99,31 +81,6 @@ function getToday() {
 
     return `${year}-${month}-${day}`;
 }
-
-
-// ================================
-// DEFAULT DATES
-// ================================
-
-function setDefaultDates() {
-
-    const today = getToday();
-
-    const expenseDate =
-        document.getElementById("expenseDate");
-
-    const incomeDate =
-        document.getElementById("incomeDate");
-
-    if (expenseDate) {
-        expenseDate.value = today;
-    }
-
-    if (incomeDate) {
-        incomeDate.value = today;
-    }
-}
-
 
 
 
@@ -920,11 +877,6 @@ function calculateIncome() {
 
 }
 
-
-// ================================
-// CALCULATE EXPENSES
-// ================================
-
 function calculateExpenses() {
 
     return expenses.reduce(
@@ -939,10 +891,6 @@ function calculateExpenses() {
 
 }
 
-
-// ================================
-// UPDATE DASHBOARD
-// ================================
 
 function updateDashboard() {
 
@@ -997,9 +945,7 @@ function updateDashboard() {
 }
 
 
-// ================================
-// UPDATE BUDGET
-// ================================
+
 
 function updateBudget() {
 
@@ -1200,7 +1146,7 @@ function updateChart() {
         return;
     }
 
-
+    
     const totals =
         getCategoryTotals();
 
@@ -1359,7 +1305,7 @@ if (themeToggle) {
 
 
             themeToggle.textContent =
-                darkMode ? "☀️" : "🌙";
+                darkMode ? "light" : "dark";
 
         }
     );
@@ -1367,26 +1313,6 @@ if (themeToggle) {
 }
 
 
-// ================================
-// ESC KEY CLOSES MODAL
-// ================================
-
-document.addEventListener(
-    "keydown",
-    function (event) {
-
-        if (
-            event.key === "Escape" &&
-            editModal &&
-            editModal.classList.contains("active")
-        ) {
-
-            closeEditModal();
-
-        }
-
-    }
-);
 
 
 // ================================
