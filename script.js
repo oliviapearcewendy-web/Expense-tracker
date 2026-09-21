@@ -1031,21 +1031,21 @@ function updateBudget() {
     if (percentage >= 100) {
 
         progressFill.style.background =
-            "var(--danger)";
+            "red";
 
     }
 
     else if (percentage >= 80) {
 
         progressFill.style.background =
-            "var(--warning)";
+            "yellow";
 
     }
 
     else {
 
         progressFill.style.background =
-            "var(--primary)";
+            "blue";
 
     }
 
