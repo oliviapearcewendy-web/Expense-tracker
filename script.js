@@ -59,6 +59,17 @@ function saveData() {
 }
 
 
+// ================================
+// FORMAT MONEY
+// ================================
+
+function formatMoney(amount) {
+
+    return new Intl.NumberFormat("en-NG", {
+        style: "currency",
+        currency: "NGN"
+    }).format(amount);
+}
 
 
 // ================================
@@ -81,6 +92,31 @@ function getToday() {
 
     return `${year}-${month}-${day}`;
 }
+
+
+// ================================
+// DEFAULT DATES
+// ================================
+
+function setDefaultDates() {
+
+    const today = getToday();
+
+    const expenseDate =
+        document.getElementById("expenseDate");
+
+    const incomeDate =
+        document.getElementById("incomeDate");
+
+    if (expenseDate) {
+        expenseDate.value = today;
+    }
+
+    if (incomeDate) {
+        incomeDate.value = today;
+    }
+}
+
 
 
 
@@ -877,6 +913,11 @@ function calculateIncome() {
 
 }
 
+
+// ================================
+// CALCULATE EXPENSES
+// ================================
+
 function calculateExpenses() {
 
     return expenses.reduce(
@@ -891,6 +932,10 @@ function calculateExpenses() {
 
 }
 
+
+// ================================
+// UPDATE DASHBOARD
+// ================================
 
 function updateDashboard() {
 
@@ -945,7 +990,9 @@ function updateDashboard() {
 }
 
 
-
+// ================================
+// UPDATE BUDGET
+// ================================
 
 function updateBudget() {
 
@@ -1146,7 +1193,7 @@ function updateChart() {
         return;
     }
 
-    
+
     const totals =
         getCategoryTotals();
 
@@ -1305,7 +1352,7 @@ if (themeToggle) {
 
 
             themeToggle.textContent =
-                darkMode ? "light" : "dark";
+                darkMode ? "☀️" : "🌙";
 
         }
     );
@@ -1313,6 +1360,26 @@ if (themeToggle) {
 }
 
 
+// ================================
+// ESC KEY CLOSES MODAL
+// ================================
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key === "Escape" &&
+            editModal &&
+            editModal.classList.contains("active")
+        ) {
+
+            closeEditModal();
+
+        }
+
+    }
+);
 
 
 // ================================
