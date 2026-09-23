@@ -1,54 +1,9 @@
-/* =========================================
-   RESET
-========================================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-
-    --success: #16a34a;
-    --danger: #dc2626;
-    --warning: #f59e0b;
-
-    --bg: #f5f7fb;
-    --card: #ffffff;
-    --text: #111827;
-    --muted: #6b7280;
-
-    --border: #e5e7eb;
-
-    --shadow:
-        0 10px 30px rgba(0, 0, 0, 0.06);
-
-    --radius: 16px;
-}
-
-
-/* =========================================
-   DARK MODE
-========================================= */
-
-body.dark {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --text: #f8fafc;
-    --muted: #94a3b8;
-    --border: #334155;
-
-    --shadow:
-        0 10px 30px rgba(0, 0, 0, 0.25);
-}
-
-
-/* =========================================
-   BODY
-========================================= */
 
 body {
     font-family:
@@ -56,30 +11,23 @@ body {
         Helvetica,
         sans-serif;
 
-    background: var(--bg);
-    color: var(--text);
+    background: #f5f7fb;
+    color: #111827;
 
     min-height: 100vh;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease;
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
 
 .header {
     width: 100%;
 
     height: 70px;
 
-    background: var(--card);
+    background: #ffffff;
 
     border-bottom:
-        1px solid var(--border);
+        1px solid #e5e7eb;
 
     display: flex;
 
@@ -95,7 +43,8 @@ body {
 
     z-index: 100;
 
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgb(0, 0, 0,0.6);
+
 }
 
 
@@ -104,7 +53,7 @@ body {
 
     font-weight: 800;
 
-    color: var(--text);
+    color: #f8fafc;
 
     display: flex;
 
@@ -113,7 +62,11 @@ body {
     gap: 8px;
 }
 
-
+.logo h2 {
+    color: #2563eb;
+    font-size: 30px;
+    font-weight: 1000;
+}
 .logo span {
     width: 35px;
 
@@ -127,7 +80,7 @@ body {
 
     border-radius: 10px;
 
-    background: var(--primary);
+    background: #2563eb;
 
     color: white;
 
@@ -144,7 +97,7 @@ body {
 
     border-radius: 50%;
 
-    background: var(--bg);
+    background: #f5f7fb;
 
     cursor: pointer;
 
@@ -159,9 +112,7 @@ body {
 }
 
 
-/* =========================================
-   CONTAINER
-========================================= */
+
 
 .container {
     width: 90%;
@@ -174,9 +125,6 @@ body {
 }
 
 
-/* =========================================
-   HERO
-========================================= */
 
 .hero {
     margin-bottom: 30px;
@@ -191,15 +139,11 @@ body {
 
 
 .hero p {
-    color: var(--muted);
+    color: #6b7280;
 
     font-size: 16px;
 }
 
-
-/* =========================================
-   SUMMARY CARDS
-========================================= */
 
 .summary-grid {
     display: grid;
@@ -214,11 +158,11 @@ body {
 
 
 .summary-card {
-    background: var(--card);
+    background: #ffffff;
 
-    border: 1px solid var(--border);
+    border: 1px solid #e5e7eb;
 
-    border-radius: var(--radius);
+    border-radius: 16px;
 
     padding: 24px;
 
@@ -228,7 +172,7 @@ body {
 
     gap: 18px;
 
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgb(0, 0, 0,0.6);
 
     transition:
         transform 0.2s ease,
@@ -257,14 +201,14 @@ body {
 
     border-radius: 13px;
 
-    background: var(--bg);
+    background: #f5f7fb;
 
     font-size: 23px;
 }
 
 
 .summary-card p {
-    color: var(--muted);
+    color: #6b7280;
 
     font-size: 14px;
 
@@ -279,31 +223,28 @@ body {
 
 .income-card {
     border-left:
-        4px solid var(--success);
+        4px solid #16a34a;
 }
 
 
 .expense-card {
     border-left:
-        4px solid var(--danger);
+        4px solid #dc2626;
 }
 
 
 .balance-card {
     border-left:
-        4px solid var(--primary);
+        4px solid #2563eb;
 }
 
 
 .budget-card {
     border-left:
-        4px solid var(--warning);
+        4px solid #f59e0b;
 }
 
 
-/* =========================================
-   FORMS
-========================================= */
 
 .forms-grid {
     display: grid;
@@ -318,15 +259,15 @@ body {
 
 
 .form-card {
-    background: var(--card);
+    background: #ffffff;
 
-    border: 1px solid var(--border);
+    border: 1px solid #e5e7eb;
 
-    border-radius: var(--radius);
+    border-radius: 16px;
 
     padding: 25px;
 
-    box-shadow: var(--shadow);
+    box-shadow: rgb(0, 0, 0,0.6);
 }
 
 
@@ -338,7 +279,7 @@ body {
 
 
 .form-description {
-    color: var(--muted);
+    color: #6b7280;
 
     font-size: 14px;
 
@@ -364,23 +305,14 @@ body {
 
 .form-group input,
 .form-group select {
-
     width: 100%;
-
     padding: 12px 13px;
-
-    border: 1px solid var(--border);
-
+    border: 1px solid #e5e7eb;
     border-radius: 9px;
-
-    background: var(--bg);
-
-    color: var(--text);
-
+    background: #f5f7fb;
+    color: #111827;
     outline: none;
-
     font-size: 14px;
-
     transition: 0.2s;
 }
 
@@ -388,55 +320,39 @@ body {
 .form-group input:focus,
 .form-group select:focus {
 
-    border-color:
-        var(--primary);
-
-    box-shadow:
-        0 0 0 3px
-        rgba(37, 99, 235, 0.1);
+    border-color:#2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 
-/* =========================================
-   BUTTONS
-========================================= */
 
 .primary-btn,
 .success-btn,
 .budget-btn {
-
     width: 100%;
-
     padding: 13px;
-
     border: none;
-
     border-radius: 9px;
-
     color: white;
-
     font-weight: 700;
-
     cursor: pointer;
-
     transition: 0.2s;
 }
 
 
 .primary-btn {
-    background: var(--primary);
+    background: #2563eb;
 }
 
 
 .primary-btn:hover {
-    background: var(--primary-dark);
-
+    background: #1d4ed8;
     transform: translateY(-1px);
 }
 
 
 .success-btn {
-    background: var(--success);
+    background: #16a34a;
 }
 
 
@@ -446,18 +362,13 @@ body {
 
 
 .budget-btn {
-    background: var(--warning);
+    background: #f59e0b;
 }
-
 
 .budget-btn:hover {
     background: #d97706;
 }
 
-
-/* =========================================
-   BUDGET PROGRESS
-========================================= */
 
 .budget-progress {
     margin-top: 25px;
@@ -465,133 +376,75 @@ body {
 
 
 .budget-progress-header {
-
     display: flex;
-
     justify-content: space-between;
-
     font-size: 13px;
-
-    color: var(--muted);
-
+    color: #6b7280;
     margin-bottom: 8px;
 }
 
 
 .progress-bar {
-
     width: 100%;
-
     height: 9px;
-
-    background: var(--bg);
-
+    background: #f5f7fb;
     border-radius: 20px;
-
     overflow: hidden;
 }
 
 
 .progress-fill {
-
     height: 100%;
-
     width: 0%;
-
-    background: var(--primary);
-
+    background: #2563eb;
     border-radius: 20px;
-
     transition:
-        width 0.5s ease;
+    width 0.5s ease;
 }
 
-
-/* =========================================
-   EXPENSE SECTION
-========================================= */
-
 .expenses-section {
-
-    background: var(--card);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: var(--radius);
-
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
     padding: 25px;
-
-    box-shadow: var(--shadow);
-
+    box-shadow: rgb(0, 0, 0,0.6);
     margin-bottom: 30px;
 }
 
 
 .section-header {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     margin-bottom: 20px;
 }
-
-
 .section-header h2 {
     font-size: 22px;
-
     margin-bottom: 5px;
 }
-
-
 .section-header p {
-    color: var(--muted);
-
+    color: #6b7280;
     font-size: 14px;
 }
-
-
 .filter-container {
-
     display: flex;
-
     align-items: center;
-
     gap: 10px;
 }
-
-
 .filter-container label {
-
-    color: var(--muted);
-
+    color: #6b7280;
     font-size: 14px;
 }
-
-
 .filter-container select {
-
-    padding: 10px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 8px;
-
-    background: var(--bg);
-
-    color: var(--text);
-
-    outline: none;
+padding: 10px;
+border: 1px solid #e5e5e5;
+border-radius: 8px;
+background: #f5f5f5;
+color: #111827;
 }
 
 
-/* =========================================
-   TABLE
-========================================= */
+
 
 .table-container {
     width: 100%;
@@ -610,67 +463,45 @@ table {
 
 
 thead {
-    background: var(--bg);
+    background: #f5f5f5;
 }
 
 
 th,
 td {
     padding: 15px;
-
     text-align: left;
-
-    border-bottom:
-        1px solid var(--border);
-
+    border-bottom:  1px solid #e5e7eb;
     font-size: 14px;
 }
 
 
 th {
-    color: var(--muted);
-
+    color: #6b7280;
     font-size: 12px;
-
     text-transform: uppercase;
-
     letter-spacing: 0.5px;
 }
 
 
 td {
-    color: var(--text);
+    color: #111827;
 }
 
 
 .category-badge {
 
     display: inline-block;
-
     padding: 5px 10px;
-
     border-radius: 20px;
-
-    background:
-        rgba(37, 99, 235, 0.1);
-
-    color:
-        var(--primary);
-
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
     font-size: 12px;
-
     font-weight: 600;
 }
 
-
-/* =========================================
-   ACTION BUTTONS
-========================================= */
-
 .action-buttons {
-
     display: flex;
-
     gap: 7px;
 }
 
@@ -695,8 +526,7 @@ td {
     background:
         rgba(37, 99, 235, 0.1);
 
-    color:
-        var(--primary);
+    color: #2563eb;
 }
 
 
@@ -705,8 +535,7 @@ td {
     background:
         rgba(220, 38, 38, 0.1);
 
-    color:
-        var(--danger);
+    color: #dc2828;
 }
 
 
@@ -717,43 +546,26 @@ td {
 }
 
 
-/* =========================================
-   EMPTY STATE
-========================================= */
 
 .empty-state {
-
     text-align: center;
-
     padding: 50px 20px;
 }
 
 
 .empty-icon {
-
     font-size: 40px;
-
     margin-bottom: 10px;
 }
-
-
 .empty-state h3 {
-
     margin-bottom: 6px;
 }
-
-
 .empty-state p {
-
-    color: var(--muted);
-
+    color: #6b7280;
     font-size: 14px;
 }
 
 
-/* =========================================
-   DASHBOARD
-========================================= */
 
 .dashboard-grid {
 
@@ -768,16 +580,16 @@ td {
 
 .dashboard-card {
 
-    background: var(--card);
+    background:#ffffff;
 
     border:
-        1px solid var(--border);
+        1px solid #e5e7eb;
 
-    border-radius: var(--radius);
+    border-radius: 16px;
 
     padding: 25px;
 
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 
@@ -791,7 +603,7 @@ td {
 
 .dashboard-description {
 
-    color: var(--muted);
+    color: #6b7280;
 
     font-size: 14px;
 
@@ -801,7 +613,7 @@ td {
 
 .dashboard-header p {
 
-    color: var(--muted);
+    color: #6b7280;
 
     font-size: 14px;
 }
@@ -814,10 +626,6 @@ td {
     position: relative;
 }
 
-
-/* =========================================
-   CATEGORY SUMMARY
-========================================= */
 
 .category-summary {
 
@@ -839,7 +647,7 @@ td {
 
     padding: 13px;
 
-    background: var(--bg);
+    background: #f5f7fb;
 
     border-radius: 10px;
 }
@@ -863,7 +671,7 @@ td {
 
     height: 9px;
 
-    background: var(--primary);
+    background: #2563eb;
 
     border-radius: 50%;
 }
@@ -876,10 +684,6 @@ td {
     font-size: 14px;
 }
 
-
-/* =========================================
-   MODAL
-========================================= */
 
 .modal {
 
@@ -918,9 +722,9 @@ td {
 
     overflow-y: auto;
 
-    background: var(--card);
+    background: #ffffff;
 
-    border-radius: var(--radius);
+    border-radius: 16px;
 
     padding: 25px;
 
@@ -958,9 +762,9 @@ td {
 
     border-radius: 50%;
 
-    background: var(--bg);
+    background: #f5f7fb;
 
-    color: var(--text);
+    color: #6b7280;
 
     font-size: 24px;
 
@@ -968,9 +772,7 @@ td {
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+
 
 footer {
 
@@ -978,15 +780,12 @@ footer {
 
     padding: 25px;
 
-    color: var(--muted);
+    color: #6b7280;
 
     font-size: 13px;
 }
 
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
 
 @media (max-width: 1100px) {
 
@@ -1104,4 +903,106 @@ footer {
         padding: 18px;
     }
 
+}
+body.dark {
+    background: black;
+    color: #f9fafb;
+}
+body.dark .header {
+    background: #1f2937;
+    border-bottom-color: #374151;
+}
+body.dark .logo {
+    color: #f9fafb;
+}
+body.dark .theme-btn {
+    background: #374151;
+    color: #f9fafb;
+}
+body.dark .hero p {
+    color: #9ca3af;
+}
+body.dark .summary-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+body.dark .card-icon {
+    background: #374151;
+}
+body.dark .form-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+body.dark .form-description {
+    color: #9ca3af;
+}
+
+body.dark .form-group label {
+    color: #f9fafb;
+}
+
+body.dark .form-group input,
+body.dark .form-group select {
+    background: #111827;
+    color: #f9fafb;
+    border-color: #374151;
+}
+
+body.dark .expenses-section {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+body.dark .dashboard-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+body.dark .section-header p,
+body.dark .dashboard-description,
+body.dark .dashboard-header p {
+    color: #9ca3af;
+}
+body.dark .filter-container label {
+    color: #9ca3af;
+}
+
+body.dark .filter-container select {
+    background: #111827;
+    color: #f9fafb;
+    border-color: #374151;
+}
+
+body.dark thead {
+    background: #111827;
+}
+
+body.dark th,
+body.dark td {
+    border-bottom-color: #374151;
+}
+
+body.dark th {
+    color: #9ca3af;
+}
+
+body.dark td {
+    color: #f9fafb;
+}
+
+body.dark .category-item {
+    background: #111827;
+}
+body.dark .progress-bar {
+    background: #374151;
+}
+
+body.dark .modal-content {
+    background: #1f2937;
+}
+body.dark .close-btn {
+    background: #374151;
+    color: #f9fafb;
+}
+body.dark footer {
+    color: #9ca3af;
 }
