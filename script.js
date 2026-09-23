@@ -36,9 +36,7 @@ let editingExpenseId = null;
 let categoryChart = null;
 
 
-// ================================
-// SAVE DATA
-// ================================
+
 
 function saveData() {
 
@@ -59,9 +57,7 @@ function saveData() {
 }
 
 
-// ================================
-// FORMAT MONEY
-// ================================
+
 
 function formatMoney(amount) {
 
@@ -722,7 +718,6 @@ function openEditModal(id) {
         dateInput.value = expense.date;
     }
 
-
     if (editModal) {
 
         editModal.classList.add("active");
@@ -731,10 +726,6 @@ function openEditModal(id) {
 
 }
 
-
-// ================================
-// CLOSE EDIT MODAL
-// ================================
 
 function closeEditModal() {
 
@@ -749,7 +740,7 @@ function closeEditModal() {
 }
 
 
-// Close button
+
 
 if (closeModal) {
 
@@ -761,7 +752,6 @@ if (closeModal) {
 }
 
 
-// Click outside modal
 
 if (editModal) {
 
@@ -1179,9 +1169,6 @@ function renderCategorySummary() {
 }
 
 
-// ================================
-// CHART
-// ================================
 
 function updateChart() {
 
@@ -1206,7 +1193,7 @@ function updateChart() {
         Object.values(totals);
 
 
-    // Remove previous chart
+    
 
     if (categoryChart) {
 
@@ -1222,7 +1209,7 @@ function updateChart() {
     }
 
 
-    // Make sure Chart.js exists
+    
 
     if (typeof Chart === "undefined") {
 
@@ -1236,9 +1223,9 @@ function updateChart() {
 
 
     categoryChart =
-        new Chart(
-            canvas,
-            {
+        new Chart( canvas,
+         
+           {
                 type: "doughnut",
 
                 data: {
@@ -1293,9 +1280,7 @@ function updateChart() {
 }
 
 
-// ================================
-// DARK / LIGHT MODE
-// ================================
+
 
 function initializeTheme() {
 
@@ -1330,7 +1315,6 @@ function initializeTheme() {
 }
 
 
-// Theme button
 
 if (themeToggle) {
 
@@ -1360,31 +1344,7 @@ if (themeToggle) {
 }
 
 
-// ================================
-// ESC KEY CLOSES MODAL
-// ================================
 
-document.addEventListener(
-    "keydown",
-    function (event) {
-
-        if (
-            event.key === "Escape" &&
-            editModal &&
-            editModal.classList.contains("active")
-        ) {
-
-            closeEditModal();
-
-        }
-
-    }
-);
-
-
-// ================================
-// START APP
-// ================================
 
 setDefaultDates();
 
