@@ -477,8 +477,6 @@ function renderExpenses() {
                 formatMoney(expense.amount);
 
 
-            // Date
-
             const dateCell =
                 document.createElement("td");
 
