@@ -869,9 +869,6 @@ if (editExpenseForm) {
 }
 
 
-// ================================
-// CATEGORY FILTER
-// ================================
 
 if (categoryFilter) {
 
@@ -881,11 +878,6 @@ if (categoryFilter) {
     );
 
 }
-
-
-// ================================
-// CALCULATE INCOME
-// ================================
 
 function calculateIncome() {
 
@@ -902,9 +894,7 @@ function calculateIncome() {
 }
 
 
-// ================================
-// CALCULATE EXPENSES
-// ================================
+
 
 function calculateExpenses() {
 
@@ -921,9 +911,7 @@ function calculateExpenses() {
 }
 
 
-// ================================
-// UPDATE DASHBOARD
-// ================================
+
 
 function updateDashboard() {
 
@@ -978,9 +966,6 @@ function updateDashboard() {
 }
 
 
-// ================================
-// UPDATE BUDGET
-// ================================
 
 function updateBudget() {
 
@@ -1040,9 +1025,7 @@ function updateBudget() {
 }
 
 
-// ================================
-// CATEGORY TOTALS
-// ================================
+
 
 function getCategoryTotals() {
 
@@ -1076,11 +1059,6 @@ function getCategoryTotals() {
     return totals;
 
 }
-
-
-// ================================
-// CATEGORY SUMMARY
-// ================================
 
 function renderCategorySummary() {
 
